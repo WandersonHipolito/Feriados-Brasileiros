@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6QI-RR-OaN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Holiday Table View Controller-->
+        <scene sceneID="0V7-da-uvI">
+            <objects>
+                <tableViewController id="zO8-83-srG" customClass="HolidayTableViewController" customModule="Feriados_Brasileiros" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="miY-8r-zB5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="FerriadoCell" textLabel="rnk-7M-QUJ" detailTextLabel="KSk-BO-Jw0" style="IBUITableViewCellStyleSubtitle" id="npB-qy-SbX">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="npB-qy-SbX" id="369-sP-EZE">
+                                    <rect key="frame" x="0.0" y="0.0" width="370" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rnk-7M-QUJ">
+                                            <rect key="frame" x="20" y="10" width="33" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KSk-BO-Jw0">
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zO8-83-srG" id="0GS-Se-Slc"/>
+                            <outlet property="delegate" destination="zO8-83-srG" id="lzt-Nx-YTB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="fAg-c0-4l7"/>
+                    <connections>
+                        <segue destination="Hog-f0-XAy" kind="show" identifier="gotoDetails" id="fdO-VW-Scx"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="puQ-PX-T2G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="138.61607142857142"/>
+        </scene>
+        <!--Holiday Details View Controller-->
+        <scene sceneID="5Q7-li-B49">
+            <objects>
+                <viewController id="Hog-f0-XAy" customClass="HolidayDetailsViewController" customModule="Feriados_Brasileiros" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aNP-ty-HAn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ls5-r5-F5X">
+                                <rect key="frame" x="5" y="93" width="404" height="764"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alguma coisa aqui" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkH-XN-Dlg">
+                                        <rect key="frame" x="0.0" y="0.0" width="404" height="166"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" systemColor="opaqueSeparatorColor"/>
+                                        <size key="shadowOffset" width="2" height="1"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alguma coisa aqui" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxG-cU-9TW">
+                                        <rect key="frame" x="0.0" y="186" width="404" height="166"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <color key="highlightedColor" systemColor="labelColor"/>
+                                        <color key="shadowColor" systemColor="opaqueSeparatorColor"/>
+                                        <size key="shadowOffset" width="2" height="1"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alguma coisa aqui" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcb-7j-mqY">
+                                        <rect key="frame" x="0.0" y="372" width="404" height="392"/>
+                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" systemColor="opaqueSeparatorColor"/>
+                                        <size key="shadowOffset" width="2" height="1"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="23O-Vq-0kJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="23O-Vq-0kJ" firstAttribute="trailing" secondItem="Ls5-r5-F5X" secondAttribute="trailing" constant="5" id="9Ud-Zr-0on"/>
+                            <constraint firstItem="Ls5-r5-F5X" firstAttribute="top" secondItem="23O-Vq-0kJ" secondAttribute="top" constant="5" id="JXP-N7-spW"/>
+                            <constraint firstItem="23O-Vq-0kJ" firstAttribute="bottom" secondItem="Ls5-r5-F5X" secondAttribute="bottom" constant="5" id="XB9-om-ExZ"/>
+                            <constraint firstItem="Ls5-r5-F5X" firstAttribute="leading" secondItem="23O-Vq-0kJ" secondAttribute="leading" constant="5" id="k7A-nk-S8N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FWg-lF-aPZ"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="Dcb-7j-mqY" id="uZq-hC-F1V"/>
+                        <outlet property="detailLabel" destination="wxG-cU-9TW" id="IDl-Iy-kGd"/>
+                        <outlet property="titleLabel" destination="HkH-XN-Dlg" id="che-hI-OZF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m3O-66-Cvd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1944.9275362318842" y="138.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DDb-7z-hE7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6QI-RR-OaN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dKx-qW-Fay">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zO8-83-srG" kind="relationship" relationship="rootViewController" id="K4z-JY-DAi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4u3-dc-QFQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
